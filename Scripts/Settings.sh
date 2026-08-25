@@ -75,4 +75,4 @@ sed -i "/set system.ntp.enable_server='0'/a\\
 \t\tadd_list system.ntp.server='3.openwrt.pool.ntp.org'" "$CFG_FILE"
 
 # 調整預設 Wi-Fi 國碼：TW（Taiwan）
-sed -i "s|set \\\${s}.country='\\\${country || 'CN'}'|set \${s}.country='TW'|" "$WIFI_UC"
+sed -i "s#country='\${country || 'CN'}'#country='TW'#" "$WIFI_UC"
